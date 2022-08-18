@@ -1,0 +1,96 @@
+body {
+  -webkit-tap-highlight-color: $pink;
+}
+
+a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+// ===================
+// Accordian
+// ===================
+
+.accordion {
+  --bs-accordion-inner-border-radius: 0;
+  height: 693px;
+}
+
+.accordion-button {
+  background-color: $pink;
+  font-family: $mainfont;
+  font-weight: $semibold;
+  font-size: 24px;
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $pink;
+  font-family: $mainfont;
+  font-weight: $semibold;
+  font-size: 24px;
+  color: white;
+}
+
+.accordion-button:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-body {
+  padding: 0;
+}
+
+.accordion-button::after {
+  background-image: url('/img/caret-down.png') !important;
+  color: white;
+}
+
+.device {
+  background-color: $aqua;
+  box-shadow: inset 0px 0px 0px 1px white;
+  height: 35px;
+  width: 100%;
+}
+
+.device p {
+  font-weight: $regular;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+}
+
+@media only screen and (min-width: 768px) {
+  .accordion {
+    height: 932px;
+  }
+
+    .accordion-button {
+      background-color: $pink;
+      font-family: $mainfont;
+      font-weight: $semibold;
+      font-size: 36px;
+      color: white;
+  }
+
+  .accordion-button:not(.collapsed) {
+      background-color: $pink;
+      font-family: $mainfont;
+      font-weight: $semibold;
+      font-size: 36px;
+      color: white;
+  }
+
+  .device {
+      height: 50px;
+
+      p {
+          font-weight: $regular;
+          color: white;
+          text-align: center;
+          line-height: 45px;
+          font-size: 32px;
+      }
+  }
+}

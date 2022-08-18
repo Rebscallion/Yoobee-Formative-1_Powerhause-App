@@ -1,0 +1,177 @@
+#tablet-pic {
+  display: none;
+}
+
+#user-container {
+  padding-bottom: 10px;
+  color: $grey;
+
+  #profile-image {
+    background-color: $aqua;
+    height: 80px;
+    width: 80px;
+    margin: 24px auto 8px auto;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    padding: 2px 4px 0 4px;
+    border-radius: 5px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: $semibold;
+    margin-left: 16px;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: $semibold;
+    margin: 5px 0 5px 16px;
+  }
+}
+
+#paired-container {
+  background-color: $lightgrey;
+  padding-top: 8px;
+  color: $grey;
+
+  h2 {
+    margin-left: 16px;
+  }
+
+  .device-line {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .device-name {
+    display: inline-block;
+    width: 80%;
+    margin-left: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: $regular;
+  }
+
+  h4 {
+    font-size: 15px;
+    font-weight: $regular;
+    color: #989899;
+    margin-left: 16px;
+    padding-bottom: 8px;
+  }
+}
+
+#settings {
+  color: $grey;
+  padding-bottom: 8px;
+
+  h2 {
+    margin-left: 16px;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: $regular;
+    margin-left: 16px;
+    padding-bottom: 8px;
+  }
+
+  .device-line {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .device-name {
+    display: inline-block;
+    width: 80%;
+    margin-left: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: $regular;
+  }
+
+  #languages {
+    display: inline-block;
+    text-align: right;
+  }
+}
+
+.cta-buttons {
+  width: 100%;
+  background-color: $lightgrey;
+  line-height: 23px;
+  text-align: center;
+  margin: 0 0 6px 0;
+  font-weight: $regular;
+}
+
+@media only screen and (min-width: 768px) {
+  #mobile-pic {
+    display: none;
+  }
+
+  #tablet-pic {
+    display: block;
+  }
+
+  #user-container #profile-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  #user-info {
+    padding-left: 23px;
+
+    h2 {
+      font-size: 34px;
+    }
+
+    h3,
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  #paired-container {
+    padding-left: 23px;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .device-line p {
+      font-size: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+  }
+
+  #settings {
+    padding-left: 23px;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .device-line p {
+      font-size: 20px;
+    }
+  }
+
+  #cta-container {
+    height: 148px;
+
+    .cta-buttons p {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

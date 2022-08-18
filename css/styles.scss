@@ -1,0 +1,618 @@
+@import 'modules/variables';
+@import 'modules/device';
+@import 'modules/deviceSettings';
+@import 'modules/settings';
+@import 'modules/toggle-switch';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: $mainfont;
+    max-width: 100%;
+    list-style: none;
+}
+
+ul {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-family: $roboto;
+    font-size: 24px;
+    color: $pink;
+    text-align: center;
+    margin: 24px 0 16px 0;
+}
+
+a:hover {
+    color: $yellow;
+}
+
+// ===================
+// Scroll Bar
+// ===================
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+// ===================
+// Navbar
+// ===================
+
+nav {
+    background-color: $purple;
+    height: 58px;
+    line-height: 55px;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24px;
+    font-family: $mainfont;
+    font-weight: $semibold;
+    color: white !important;
+
+    #logo {
+        width: 70%;
+
+        #logo-img {
+            height: 43px;
+            vertical-align: middle;
+            margin: 0 13px 0 18px;
+        }
+    }
+
+    #hamburger-icon {
+        width: 30%;
+        text-align: right;
+    }
+
+    .primary-navigation {
+        background: hsl(267, 52%, 49% / 1);
+        backdrop-filter: blur(2rem);
+    }
+
+    .primary-navigation a {
+        text-decoration: none;
+    }
+
+    .primary-navigation a>[aria-hidden="true"] {
+        margin-inline-end: 0.75em;
+    }
+}
+
+// ===================
+// App Widgets
+// ===================
+
+#section-one {
+
+    #routine {
+        width: 100%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 16px;
+
+        .widget {
+            height: 78px;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+// ===================
+// Home Health
+// ===================
+
+#section-two {
+    background-color: $babypink;
+
+    #health {
+        height: 231px;
+        background-color: $babypink;
+
+        #left-container {
+            background-color: $purple;
+            height: 231px;
+            width: 52%;
+            display: inline-block;
+
+            #dial {
+                width: 100%;
+                text-align: center;
+                padding-top: 21.9px;
+            }
+
+            h3 {
+                text-align: center;
+                line-height: 10px;
+                color: white;
+                font-weight: $regular;
+            }
+        }
+
+        #right-container {
+            width: 46%;
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 26px;
+
+            #results {
+                width: 90%;
+                margin: auto;
+            }
+
+            h4 {
+                font-family: $roboto;
+                font-size: 15px;
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
+
+            .health-bars {
+                background-color: $aqua;
+                width: 80%;
+                height: 15px;
+                text-align: center;
+                position: relative;
+                margin-top: 5px;
+            }
+
+            #moisture,
+            #heat-retention,
+            #air-quality {
+                background-color: $pink;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 8;
+            }
+
+            #moisture {
+                width: 38%;
+            }
+
+            #heat-retention {
+                width: 62%;
+            }
+
+            #air-quality {
+                width: 79%;
+            }
+
+            p {
+                float: right;
+                font-size: 13px;
+            }
+
+            #run-button {
+                text-decoration: none;
+                background-color: $yellow;
+                border-radius: 5px;
+                width: 115px;
+                height: 25px;
+                margin: 19px auto;
+                padding: 8px 5px;
+
+                h3 {
+                    font-size: 15px;
+                    line-height: 10px;
+                    color: white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// ===================
+// Daily Usage
+// ===================
+
+#section-three {
+    height: 225px;
+
+    #use-container {
+        height: 229px;
+        width: 90%;
+        margin: auto;
+
+        h1 {
+            color: $pink;
+            text-align: center;
+            font-size: 24px;
+            font-family: $roboto;
+            margin-top: 14px;
+        }
+
+        h2 {
+            text-align: center;
+            color: grey;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        #bars {
+            justify-content: center;
+            max-height: 90%;
+            display: flex;
+
+
+            h4 {
+                font-weight: $regular;
+                font-size: 15px;
+                line-height: 17px;
+                writing-mode: tb-rl;
+                transform: rotate(-180deg);
+                margin-bottom: 0;
+            }
+
+            .use-bars {
+                background-color: $aqua;
+                width: 14px;
+                writing-mode: tb-rl;
+                transform: rotate(-180deg);
+                height: 120px;
+                position: relative;
+                margin: 0 5px 0 1px;
+            }
+
+            #stereo,
+            #acunit,
+            #loungeLight,
+            #bedroomLight,
+            #exteriorLight,
+            #tv,
+            #coffeeMaker,
+            #Roomba {
+                background-color: $pink;
+                width: 14px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+
+            #stereo {
+                height: 33%;
+            }
+
+            #acUnit {
+                height: 75%;
+            }
+
+            #loungeLight {
+                height: 41%;
+            }
+
+            #bedroomLight {
+                height: 62%;
+            }
+
+            #exteriorLight {
+                height: 29%;
+            }
+
+            #tv {
+                height: 8%;
+            }
+
+            #coffeeMaker {
+                height: 4%;
+            }
+
+            #Roomba {
+                height: 33%;
+            }
+        }
+    }
+}
+
+// ===================
+// Footer
+// ===================
+
+footer {
+    height: 100px;
+    background-color: $purple;
+    color: white;
+    font-family: $roboto;
+    padding: 10px 0;
+    display: flex;
+
+    #help-links {
+        width: 58%;
+        display: inline-block;
+    }
+
+    h5 {
+        font-size: 14px;
+        margin: 5px 0 5px 16px;
+    }
+
+    ul {
+        margin-left: 16px;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            list-style: none;
+            font-size: 12px;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+    #call {
+        display: flex;
+        width: 60%;
+        margin-left: 88px;
+        padding-top: 35px;
+
+        h4 {
+            margin-left: 15px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 35em) {
+    .primary-navigation {
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 0%;
+        flex-direction: column;
+        padding: 5rem 2em;
+        transform: translateX(100%);
+    }
+
+
+    .primary-navigation li {
+        font-size: 30px;
+        list-style: none;
+        padding: 30px 0;
+        width: 90%;
+        margin: auto auto;
+        text-align: center;
+    }
+
+    .mobile-nav-toggle {
+        line-height: 55px;
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background: url("/img/list.svg");
+        background-repeat: no-repeat;
+        width: 2rem;
+        border: 0;
+        aspect-ratio: 1;
+        top: 18px;
+        right: 1rem;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    nav ul li a {
+        color: white !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    // ===================
+    // Navbar
+    // ===================
+
+    nav {
+        height: 118px;
+        padding: 24px;
+        line-height: 64px;
+
+        #logo {
+            width: 40%;
+            font-size: 36px;
+
+            #logo-img {
+                height: 52px;
+                margin-right: 20px;
+            }
+        }
+
+        #hamburger-icon {
+            display: none;
+        }
+
+        #nav-links {
+            display: block;
+            width: 60%;
+
+            ul {
+                text-align: right;
+            }
+
+            li {
+                display: inline-block;
+                text-align: right;
+                padding-left: 24px;
+            }
+        }
+    }
+
+    .mobile-nav-toggle {
+        display: none;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+// ===================
+// App Widgets
+// ===================
+
+    #section-one {
+        height: 258px;
+
+        #routine {
+            padding: 0 50px;
+            grid-template-columns: repeat(5, 1fr);
+
+            .widget {
+                gap: 20px;
+
+                .emojis {
+                    width: 95px;
+                }
+            }
+        }
+    }
+
+ // ===================
+// Home Health
+// ===================
+
+    #section-two {
+        height: 337px;
+
+        #health {
+            font-size: 15px;
+
+            #left-container {
+                height: 337px;
+
+                #dial {
+                    padding-top: 55px;
+                }
+
+                h3 {
+                    font-size: 28px;
+                    margin-top: 38px;
+                }
+            }
+
+            #right-container {
+                .health-bars {
+                    width: 90%;
+                }
+
+                #results {
+                    padding-top: 40px;
+                }
+
+                h4 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                #run-button {
+                    width: 169px;
+                    height: 42px;
+                    padding: 4px;
+                    margin: 30px auto;
+
+                    h3 {
+                        font-size: 20px;
+                        line-height: 37px;
+                    }
+                }
+            }
+        }
+    }
+
+// ===================
+// Daily Usage
+// ===================
+
+    #section-three {
+        height: 340px;
+        padding-top: 28px;
+
+        #use-container {
+            h2 {
+                font-size: 18px;
+            }
+
+            #bars {
+
+                h4 {
+                    font-size: 18px;
+                    line-height: 23px;
+                }
+
+                .use-bars {
+                    width: 22px;
+                    height: 160px;
+                }
+
+                #stereo,
+                #acunit,
+                #loungeLight,
+                #bedroomLight,
+                #exteriorLight,
+                #tv,
+                #coffeeMaker,
+                #Roomba {
+                    width: 19px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+// ===================
+// Footer
+// ===================
+
+    footer {
+        height: 144px;
+        padding: 24px 10px;
+
+        #help-links {
+            width: 100%;
+
+            h5 {
+                font-size: 18px;
+            }
+
+            li {
+                font-size: 14px;
+            }
+        }
+
+        #call {
+            width: 35%;
+            margin-left: 0;
+            padding-top: 32px;
+
+            h4 {
+                font-size: 25px;
+            }
+        }
+    }
+}
